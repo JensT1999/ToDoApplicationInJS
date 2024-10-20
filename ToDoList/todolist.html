@@ -1,0 +1,143 @@
+<!DOCTYPE.html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style type="text/css">
+            
+            body {
+                background-color: #9ec6f0;
+                font-family: Arial;
+            }
+            
+            #mainDiv {
+                background-color: #e1e5ea;
+                width: 664px;
+                height: 600px;
+                margin-top: 30px;
+                margin-left: 30%;
+                margin-right: 30%; 
+            }
+            
+            #inputDiv {
+                height: 300px;
+                width: 250px;
+                border-width: 1px;
+                border-style: solid;
+                float: right;
+            }
+            
+            .input {
+                width: 200px;
+                height: 25px;
+                margin-left: 25px;
+                margin-right: 25px;
+            }
+            
+            #listDiv {
+                float: left;
+                height: 300px;
+                width: 410px;
+                overflow-y: auto;
+                border-width: 1px;
+                border-style: solid;
+            }
+            
+            #todotable {
+                border-spacing: 17px;
+            }
+            
+            .tableItems:hover {
+                background-color: green;
+            }
+            
+            #delete {
+                width: 95px;
+                margin-right: 5px;
+            }
+            
+            #deleteselector {
+                width: 95px;
+            }
+            
+            #descriptionDiv {
+                width: 662px;
+                height: 297px;
+                border-width:  1px;
+                border-style: solid;
+            }
+            
+            #descriptionInputDiv {
+                float: left;
+                margin-top: 20px;
+                margin-left: 15px;
+            }
+            
+            #descriptionInput {
+                resize: none;
+                float: left;
+                margin-top: 20px;
+                margin-left: 60px;
+            }
+            
+            .clearFloat {
+                clear: both;
+            }
+            
+        </style>
+    </head>
+    
+    <body>
+        <div id="mainDiv">
+            <div id="inputDiv">
+                <p><input type="text" placeholder="Beschreibung" class="input" id="textInput"></p>
+                <p><select class="input" id="priorityInput">
+                    <option>Niedrige Priorität</option>
+                    <option>Mittlere Priorität</option>
+                    <option>Höchste Priorität</option>
+                </select></p>
+                <p><input type="date" class="input" id="dateInput"></p>
+                <p><button class="input" id="button">Eingabe</button></p>
+                <p class="input">
+                    <button id="delete">Löschen</button>
+                    <select id="deleteselector">
+                        <option>Alle</option>
+                        <option>Markierte</option>
+                    </select>
+                </p>
+            </div>
+                
+            <div id="listDiv">
+                <table id="todotable">
+                    <thead>
+                        <tr>
+                            <th>Auswahl</th>
+                            <th>Beschreibung</th>
+                            <th>Priorität</th>
+                            <th>Deadline</th>
+                        </tr>
+                    </thead>
+                
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        
+            <div class="clearFloat"></div>
+        
+            <div id="descriptionDiv">
+                <div id="descriptionInputDiv">
+                    <p>Bitte den Text für eine <br> ausführliche Beschreibung <br> angeben.</p>
+                    <p><button id="safeDescription">Speichern</button></p>
+                </div>
+                
+                <textarea id="descriptionInput" rows="17" cols="50"></textarea>
+
+            </div>
+            
+        </div>
+        
+        <script src="todolist.js"></script>
+    </body>
+</html>
