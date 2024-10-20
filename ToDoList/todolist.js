@@ -53,7 +53,10 @@ button.onclick = function() {
     if(allFilled() == true) {
         let todo = new ToDo(getCurrentId(), unchecked_Value, getTextInput(), getPriority(), getDateInput(), "");
         
-        addToDo(todo);        
+        addToDo(todo); 
+        
+        textfield.value = "";
+        dateInput.value = "";
     } else {
         alert("Bitte alle Felder ausfüllen!");
     }
